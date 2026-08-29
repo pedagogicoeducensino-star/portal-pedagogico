@@ -23,7 +23,7 @@
 
     /* CAIXA PRINCIPAL */
     .hub-container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
     }
 
@@ -50,7 +50,7 @@
       transform: translateY(-2px); 
     }
 
-    /* CARDS DOS SISTEMAS (BOTÕES GRANDES) */
+    /* CARDS DOS SISTEMAS */
     .card-sistema {
       background: #ffffff;
       border-radius: 15px;
@@ -73,9 +73,8 @@
 
     .icon-huge {
       font-size: 3.5rem;
-      color: var(--escola-laranja);
       margin-bottom: 15px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
     }
 
     .header-painel {
@@ -96,7 +95,7 @@
   <!-- TELA DE LOGIN CENTRALIZADA -->
   <div id="telaLogin" class="card-login">
     <div class="text-center mb-4">
-      <i class="fas fa-th fs-1 text-theme mb-3" style="color: #ff6b00;"></i>
+      <i class="fas fa-th fs-1 mb-3" style="color: #ff6b00;"></i>
       <h3 class="fw-bold text-dark">Portal Educ</h3>
       <p class="text-muted small">Acesso Unificado aos Sistemas</p>
     </div>
@@ -113,39 +112,83 @@
     <div class="header-painel">
       <div>
         <h3 class="fw-bold m-0 text-dark">Portal da Coordenação</h3>
-        <span class="text-muted small">Selecione a ferramenta desejada abaixo</span>
+        <span class="text-muted small">Selecione a ferramenta desejada abaixo para iniciar o trabalho.</span>
       </div>
       <button class="btn btn-light border text-danger fw-bold" onclick="sair()"><i class="fas fa-sign-out-alt"></i> Encerrar Sessão</button>
     </div>
 
-    <!-- GRADE DE SISTEMAS -->
+    <!-- GRADE DE SISTEMAS (4 por linha em telas grandes, ajusta automático no celular) -->
     <div class="row g-4">
       
-      <!-- ITEM 1: CERTIFICADOS -->
-      <div class="col-md-4">
-        <!-- COLOQUE O LINK DO SEU SISTEMA DE CERTIFICADOS AQUI NO href -->
-        <a href="https://SEU_LINK_DO_GITHUB_AQUI" target="_blank" class="card-sistema">
-          <i class="fas fa-certificate icon-huge"></i>
+      <!-- 1. CERTIFICADOS -->
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <a href="https://pedagogicoeducensino-star.github.io/emissor-de-certificado/" target="_blank" class="card-sistema">
+          <i class="fas fa-certificate icon-huge" style="color: #ff6b00;"></i>
           <h5 class="fw-bold text-dark mb-2">Emissor de Certificados</h5>
-          <p class="text-muted small m-0">Geração de documentos de conclusão e desistência.</p>
+          <p class="text-muted small m-0">Conclusão e Desistência</p>
         </a>
       </div>
 
-      <!-- ITEM 2: OUTRO SISTEMA (EXEMPLO) -->
-      <div class="col-md-4">
-        <a href="#" target="_blank" class="card-sistema">
-          <i class="fas fa-users icon-huge" style="color: #d4af37;"></i>
-          <h5 class="fw-bold text-dark mb-2">Consulta de Alunos</h5>
-          <p class="text-muted small m-0">Pesquisa rápida de matrículas e dados cadastrais.</p>
+      <!-- 2. DOCUMENTOS -->
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <a href="https://pedagogicoeducensino-star.github.io/emiss-odedocumentos/" target="_blank" class="card-sistema">
+          <i class="fas fa-file-signature icon-huge" style="color: #d4af37;"></i>
+          <h5 class="fw-bold text-dark mb-2">Emissão de Documentos</h5>
+          <p class="text-muted small m-0">Declarações e ofícios oficiais</p>
         </a>
       </div>
 
-      <!-- ITEM 3: OUTRO SISTEMA (EXEMPLO) -->
-      <div class="col-md-4">
-        <a href="#" target="_blank" class="card-sistema">
-          <i class="fas fa-chart-line icon-huge" style="color: #4a4a4a;"></i>
+      <!-- 3. FREQUÊNCIA DIÁRIA -->
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <a href="https://pedagogicoeducensino-star.github.io/frequenciadiaria/" target="_blank" class="card-sistema">
+          <i class="fas fa-calendar-check icon-huge" style="color: #4a4a4a;"></i>
+          <h5 class="fw-bold text-dark mb-2">Frequência Diária</h5>
+          <p class="text-muted small m-0">Controle de presença de alunos</p>
+        </a>
+      </div>
+
+      <!-- 4. NOTAS -->
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <a href="https://pedagogicoeducensino-star.github.io/notas/" target="_blank" class="card-sistema">
+          <i class="fas fa-chart-bar icon-huge" style="color: #ff6b00;"></i>
           <h5 class="fw-bold text-dark mb-2">Painel de Notas</h5>
-          <p class="text-muted small m-0">Acesso aos diários e médias das turmas.</p>
+          <p class="text-muted small m-0">Lançamento e consulta de médias</p>
+        </a>
+      </div>
+
+      <!-- 5. FORMULÁRIO -->
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <a href="https://pedagogicoeducensino-star.github.io/formulario/" target="_blank" class="card-sistema">
+          <i class="fas fa-clipboard-list icon-huge" style="color: #d4af37;"></i>
+          <h5 class="fw-bold text-dark mb-2">Formulários</h5>
+          <p class="text-muted small m-0">Cadastros e registros</p>
+        </a>
+      </div>
+
+      <!-- 6. MATERIAL & APOSTILA -->
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <a href="https://pedagogicoeducensino-star.github.io/material-apostila-curso/" target="_blank" class="card-sistema">
+          <i class="fas fa-book-open icon-huge" style="color: #4a4a4a;"></i>
+          <h5 class="fw-bold text-dark mb-2">Materiais e Apostilas</h5>
+          <p class="text-muted small m-0">Repositório de conteúdo dos cursos</p>
+        </a>
+      </div>
+
+      <!-- 7. ELABORADOR DE ATIVIDADES -->
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <a href="https://pedagogicoeducensino-star.github.io/elaboradoratividades/" target="_blank" class="card-sistema">
+          <i class="fas fa-pencil-ruler icon-huge" style="color: #ff6b00;"></i>
+          <h5 class="fw-bold text-dark mb-2">Elaborador de Atividades</h5>
+          <p class="text-muted small m-0">Criação de exercícios e provas</p>
+        </a>
+      </div>
+
+      <!-- 8. ATIVIDADES -->
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <a href="https://pedagogicoeducensino-star.github.io/atividades/" target="_blank" class="card-sistema">
+          <i class="fas fa-tasks icon-huge" style="color: #d4af37;"></i>
+          <h5 class="fw-bold text-dark mb-2">Banco de Atividades</h5>
+          <p class="text-muted small m-0">Consulta do acervo de atividades</p>
         </a>
       </div>
 
@@ -153,7 +196,7 @@
   </div>
 
   <script>
-    // Verifica se já está logado ao atualizar a página
+    // Verifica se já está logado ao atualizar a página (F5)
     window.addEventListener('DOMContentLoaded', () => {
       if(sessionStorage.getItem("logadoPortalEduc") === "true") {
         document.getElementById("telaLogin").classList.add("oculto");
@@ -162,8 +205,8 @@
     });
 
     function login() {
-      // Mesma senha que você já usa nos outros lugares
-      if(document.getElementById("pass").value === "1312892099") {
+      // Mesma senha que usamos nos outros sistemas
+      if(document.getElementById("pass").value === "2490") {
         sessionStorage.setItem("logadoPortalEduc", "true");
         document.getElementById("telaLogin").classList.add("oculto");
         document.getElementById("telaPainel").classList.remove("oculto");
